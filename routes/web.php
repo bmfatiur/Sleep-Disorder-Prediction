@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PredictionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,4 +18,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Modified part 
+Route::get('/sleep', function () {
+    return view('prediction.sleep');
+});
+
+Route::post('/predict-sleep',[PredictionController::class, 'predictSleepDisorder'] )->name('predictSleepDisorder');
 require __DIR__.'/auth.php';

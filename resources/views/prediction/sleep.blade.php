@@ -50,7 +50,19 @@
 
             <div class="form-group">
                 <label for="occupation">Occupation:</label>
-                <input type="text" class="form-control" name="Occupation" id="occupation" required>
+                <select class="form-control" name="Occupation" id="occupation" required>
+                    <option value="Accountant">Accountant</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Engineer">Engineer</option>
+                    <option value="Lawyer">Lawyer</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Nurse">Nurse</option>
+                    <option value="Sales Representative">Sales Representative</option>
+                    <option value="Salesperson">Salesperson</option>
+                    <option value="Scientist">Scientist</option>
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="Teacher">Teacher</option>
+                </select>
             </div>
 
             <button type="submit" class="btn btn-primary">Predict</button>

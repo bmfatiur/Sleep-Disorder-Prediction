@@ -16,8 +16,10 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
+            'role_id'=>2,   //2->customer
+            'is_system_admin'=>0,   //=->not system admin
             'name' => 'Test User',
-            'email' => 'test@example.com',
+            'email' => 'test@mail.com',
         ]);
     }
 }

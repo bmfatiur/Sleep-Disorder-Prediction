@@ -1,3 +1,5 @@
+<title>Register | AI Computing</title>
+
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
         @csrf

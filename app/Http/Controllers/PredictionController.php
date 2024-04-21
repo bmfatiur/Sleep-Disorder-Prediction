@@ -14,14 +14,15 @@ class PredictionController extends Controller
         if ($response->successful()) {
             $predictedSleepDisorder = $response->json()['predicted_sleep_disorder']??null;
             if ($predictedSleepDisorder !== null) {
-                return $predictedSleepDisorder;
+                $result = $predictedSleepDisorder;
             } else {
-                return response()->json(['error'=>'Failed'],500);
+                $result = response()->json(['error'=>'Failed'],500);
             }
             
         }
         else{
-            return response()->json(['error'=>'Failed to predict'],$response->status());
+            $result = response()->json(['error'=>'Failed to predict'],$response->status());
         }
+        return view('prediction.predict', compact('result'));
     }
 }
